@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Firefox">
+    <output-path>$PROJECT_DIR$/out/artifacts/Firefox</output-path>
+    <root id="archive" name="Firefox.jar">
+      <element id="module-output" name="profile-switcher" />
+      <element id="library" level="project" name="flatlaf-1.1.2" />
+    </root>
+  </artifact>
+</component>
