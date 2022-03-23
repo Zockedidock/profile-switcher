@@ -134,9 +134,9 @@ public class Main extends Frame
     {
         Label test = new Label();
         test.set_bounds(5, 0 + p, 167, 20)
-                .set_text("Brave:")
-                .set_foreground(TEXTCOLOR)
-                .set_cursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
+            .set_text("Brave:")
+            .set_foreground(TEXTCOLOR)
+            .set_cursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
         cp.add(test);
         // Entertainment-Button
         BufferedImage entertainmentIcon;
@@ -145,18 +145,18 @@ public class Main extends Frame
             entertainmentIcon = ImageIO.read(getClass().getClassLoader().getResource("Entertainment.png"));
             bEntertainment = new Button(new ImageIcon(entertainmentIcon.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH )));
             bEntertainment.set_bounds(ENTXPOS, 25 + p, 150, 150)
-                    .set_border(BorderFactory.createEmptyBorder())
-                    .set_background(BUTTONCOLOR)
-                    .add_action_listener(this::bBraveEntertainment_ActionPerformed)
-                    .add_mouse_listener(new ButtonMouseAdapter(bEntertainment));
+                          .set_border(BorderFactory.createEmptyBorder())
+                          .set_background(BUTTONCOLOR)
+                          .add_action_listener(this::bBraveEntertainment_ActionPerformed)
+                          .add_mouse_listener(new ButtonMouseAdapter(bEntertainment));
             cp.add(bEntertainment);
         }
         catch (Exception e) {System.out.println("ERROR:" + e);}
         // Entertainment text
         Label lEntertainment = new Label("", SwingConstants.CENTER);
         lEntertainment.set_bounds(ENTXPOS, TEXTYPOS + p, 150, 25)
-                .set_text("Entertainment")
-                .set_foreground(TEXTCOLOR);
+                      .set_text("Entertainment")
+                      .set_foreground(TEXTCOLOR);
         cp.add(lEntertainment);
         /*
             Homework-Button
@@ -168,18 +168,18 @@ public class Main extends Frame
             homeworkIcon = ImageIO.read(getClass().getClassLoader().getResource("Homework.png"));
             bHomework = new Button(new ImageIcon(homeworkIcon.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH )));
             bHomework.set_bounds(HOMEXPOS, 25 + p, 150, 150)
-                    .set_border(BorderFactory.createEmptyBorder())
-                    .set_background(BUTTONCOLOR)
-                    .add_action_listener(this::bBraveHomework_ActionPerformed)
-                    .add_mouse_listener(new ButtonMouseAdapter(bHomework));
+                     .set_border(BorderFactory.createEmptyBorder())
+                     .set_background(BUTTONCOLOR)
+                     .add_action_listener(this::bBraveHomework_ActionPerformed)
+                     .add_mouse_listener(new ButtonMouseAdapter(bHomework));
             cp.add(bHomework);
         }
         catch (Exception e) {System.out.println("ERROR:" + e);}
         // Entertainment text
         Label lHomework = new Label("", SwingConstants.CENTER);
         lHomework.set_bounds(HOMEXPOS, TEXTYPOS + p, 150, 25)
-                .set_text("Research")
-                .set_foreground(TEXTCOLOR);
+                 .set_text("Research")
+                 .set_foreground(TEXTCOLOR);
         cp.add(lHomework);
     }
 
@@ -187,7 +187,7 @@ public class Main extends Frame
     {
         try
         {
-            process.exec("\"C:/Program Files/Mozilla Firefox/firefox.exe\" -p Homework");
+            process.exec("\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" -p Homework");
         }
         catch (IOException e) { System.out.println("ERROR " + e); }
         this.dispose();
@@ -197,13 +197,13 @@ public class Main extends Frame
     {
         try
         {
-            process.exec("\"C:/Program Files/Mozilla Firefox/firefox.exe\" -p Entertainment");
+            process.exec("\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" -p Entertainment");
         }
         catch (IOException e) { System.out.println("ERROR " + e); }
         this.dispose();
         System.exit(0);
     }
-
+    /*
     public void bBraveHomework_ActionPerformed(ActionEvent evt)
     {
         try
@@ -224,7 +224,7 @@ public class Main extends Frame
         this.dispose();
         System.exit(0);
     }
-
+    */
     public class ButtonMouseAdapter extends MouseAdapter
     {
         Button button;
